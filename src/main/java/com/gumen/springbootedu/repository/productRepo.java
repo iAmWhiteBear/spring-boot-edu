@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
+
 public class productRepo {
     private List<Product> productRepo;
 
@@ -22,7 +22,6 @@ public class productRepo {
         productRepo.add(new Product(5,"eggs",255));
         productRepo.add(new Product(6,"orange",255));
         productRepo.add(new Product(7,"lemon",0));
-
     }
 
     public Optional<Product> getProductById(int id){

@@ -1,8 +1,20 @@
 package com.gumen.springbootedu.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "product")
 public class Product {
-    private Integer id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "title")
     private String Title;
+
+    @Column(name = "price")
     private double cost;
 
     public Product() {
@@ -13,7 +25,7 @@ public class Product {
         this.cost = cost;
     }
 
-    public Product(int id, String title, double cost) {
+    public Product(long id, String title, double cost) {
         this.id = id;
         Title = title;
         this.cost = cost;
@@ -21,11 +33,11 @@ public class Product {
 
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
